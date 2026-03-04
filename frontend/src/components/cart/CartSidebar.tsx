@@ -43,12 +43,7 @@ export default function CartSidebar() {
       })
       await initiateRazorpayPayment(
         orderData,
-        async (response) => {
-          await orderApi.verify(orderData.order_id, {
-            razorpay_order_id: response.razorpay_order_id,
-            razorpay_payment_id: response.razorpay_payment_id,
-            razorpay_signature: response.razorpay_signature
-          })
+        await orderApi.verify(orderData.order_id, response as Record<string, string>)
           clearCart()
           setOpen(false)
           toast.success(`✅ Order ${orderData.order_number} confirmed!`)
