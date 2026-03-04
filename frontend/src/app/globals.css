@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cream: #F5F0E8;
+  --beige: #EDE5D0;
+  --warm-sand: #D9C9A8;
+  --brown-light: #C4A882;
+  --brown-mid: #9B7B52;
+  --brown-deep: #6B4F2A;
+  --espresso: #2C1A0E;
+  --matte-black: #1A1410;
+  --accent-gold: #C9A84C;
+  --text-muted: #7A6245;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--espresso);
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--beige); }
+::-webkit-scrollbar-thumb { background: var(--brown-mid); border-radius: 3px; }
+
+* { box-sizing: border-box; }
+
+/* Font utility classes */
+.font-display { font-family: var(--font-display), 'Georgia', serif; }
+.font-body    { font-family: var(--font-body), 'system-ui', sans-serif; }
+
+/* Color utilities */
+.bg-cream       { background-color: var(--cream); }
+.bg-beige       { background-color: var(--beige); }
+.bg-espresso    { background-color: var(--espresso); }
+.bg-matte-black { background-color: var(--matte-black); }
+.bg-accent-gold { background-color: var(--accent-gold); }
+
+.text-espresso   { color: var(--espresso); }
+.text-accent-gold { color: var(--accent-gold); }
+.text-brown-mid  { color: var(--brown-mid); }
+.text-brown-deep { color: var(--brown-deep); }
+.text-text-muted { color: var(--text-muted); }
+
+.border-beige      { border-color: var(--beige); }
+.border-warm-sand  { border-color: var(--warm-sand); }
+.border-brown-mid  { border-color: var(--brown-mid); }
+.border-espresso   { border-color: var(--espresso); }
+.border-accent-gold { border-color: var(--accent-gold); }
+
+.hover\:bg-brown-deep:hover    { background-color: var(--brown-deep); }
+.hover\:border-espresso:hover  { border-color: var(--espresso); }
+.hover\:border-accent-gold:hover { border-color: var(--accent-gold); }
+.hover\:text-accent-gold:hover { color: var(--accent-gold); }
+.hover\:text-espresso:hover    { color: var(--espresso); }
+
+/* Focus ring using accent gold */
+.focus\:border-brown-mid:focus { border-color: var(--brown-mid); }
+.focus\:border-accent-gold:focus { border-color: var(--accent-gold); }
